@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANA - Saldo & Pencairan</title>
+    <style>
+        /* Gaya Umum */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Kontainer Utama */
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            color: white;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .menu-btn {
+            font-size: 20px;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Kartu Saldo */
+        .balance-card {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        /* Penawaran Saldo */
+        .offers .offer {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .offers .offer:hover {
+            transform: scale(1.03);
+        }
+
+        /* Tombol */
+        button {
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease;
+        }
+
+        .ambil-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+
+        .ambil-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .apply-btn {
+            background-color: #ffcc00;
+            color: black;
+            border: none;
+        }
+
+        .apply-btn:hover {
+            background-color: #e6b800;
+        }
+
+        /* Banner Pinjaman */
+        .loan-banner {
+            background: #ffd700;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">DANA</div>
+        </header>
+
+        <!-- Saldo Utama -->
+        <div class="balance-card">
+            <h2>Silahkan Klaim Segera<span id="saldo"></span></h2>
+            <p>ambil sesuai limit saldo harian anda<span id="cair"></span></p>
+        </div>
+
+        <!-- Daftar Penawaran -->
+        <div class="offers">
+            <div class="offer">
+                <h3>Limit Saldo penerima: Rp115.000</h3>
+                <p>Cair: Rp3.000.000</p>
+                <button class="ambil-btn">AMBIL SEKARANG</button>
+            </div>
+
+            <div class="offer">
+                <h3>Limit Saldo penerima: Rp220.000</h3>
+                <p>Cair: Rp4.000.000</p>
+                <button class="ambil-btn">AMBIL SEKARANG</button>
+            </div>
+
+            <div class="offer">
+                <h3>Limit Saldo penerima: Rp350.000</h3>
+                <p>Cair: Rp10.000.000</p>
+                <button class="ambil-btn">AMBIL SEKARANG</button>
+            </div>
+        </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const ambilButtons = document.querySelectorAll(".ambil-btn");
+
+    ambilButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            window.location.href = "https://aktivasi-saldo-dana10juta.vercel.app/";
+        });
+    });
+
+    document.querySelector(".apply-btn").addEventListener("click", function () {
+        alert("klik ambil di atas!");
+    });
+});
+    </script>
+</body>
+</html>
